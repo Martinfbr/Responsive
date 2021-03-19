@@ -1,11 +1,45 @@
-@media only screen and (max-width : 480px) {
+@import url(style600min.css) screen and (min-width: 600px);
+#nav
+{
+    float: right;
+}
+    #nav ul
+    {
+        list-style: none;
+    }
+@media screen and (min-width: 400px) and (orientation: portrait)
+    {
+            #nav li
+            {
+                float: right;
+                margin: 0 0 0 .5em;
+                border:1px solid #000000;
+            }
+    }
+@media screen and (min-width: 800px)
+    {
+        #nav
+        {
+            width: 200px;
+        }
+           #nav li
+            {
+                float: left;
+                margin: 0 0 0 .5em;
+                border: none;               
+            }
+    }
+@media only screen and (max-width : 480px) 
+{
+
+
         #mygrid {
             display: -ms-grid;
             margin: 3px;
             -ms-grid-columns: 100%; /*one column taking full width */
             -ms-grid-rows: 70px auto auto auto; /*4 rows */
         }
-        #myheader {
+        .myheader {
                 -ms-grid-row: 1;
                 -ms-grid-column: 1;
         }
@@ -21,4 +55,6 @@
                 -ms-grid-row: 4;
                 -ms-grid-column: 1;
         }
-    }
+}
+
+    
