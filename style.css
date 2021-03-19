@@ -116,9 +116,9 @@
                 }
             }
 
-            @media only screen and (min-width : 481px) {
-                /*make two columns and move block 3 next to 1 — just because we can*/
-                    #mygrid {
+ @media only screen and (min-width : 481px) {
+ /*make two columns and move block 3 next to 1 — just because we can*/
+    #mygrid {
                         display: -ms-grid;
                         -ms-grid-columns: 10px 1fr 10px 1fr 10px; /*10px columns to spacing in between*/
                         -ms-grid-rows: 100px 1fr 1fr; /*100px row and two rows each taking 1 fraction
@@ -179,6 +179,37 @@
      img, object {
      max-width: 100%;
                    }
+                   /* For mobile phones: */
+ @media only screen and (min-width:320px) and (max-width:480px){
+
+        #mygrid {
+                display: -ms-grid;
+                -ms-grid-columns: 1fr 10px 1fr 10px 1fr;
+                -ms-grid-rows: 100px 1fr;
+                margin: 5px;
+            }
+            #myheader {
+                    -ms-grid-row: 1;
+                    -ms-grid-column: 1;
+                    -ms-grid-column-span: 5;
+                    background-color: #EEB215;
+            }
+            #block1 {
+                    -ms-grid-row: 2;
+                    -ms-grid-column: 1;
+                    background-color: #B2B0B0;
+            }
+            #block2 {
+                    -ms-grid-row: 2;
+                    -ms-grid-column: 3;
+                    background-color: #726E6E;
+                    }
+            #block3 {
+                    -ms-grid-row: 2;
+                    -ms-grid-column: 5;
+                    background-color: #515050;
+            }
 
 
-        
+}   
+ 
